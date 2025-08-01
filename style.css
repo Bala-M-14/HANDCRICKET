@@ -1,0 +1,340 @@
+body{
+    background-image: url('OIP.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    
+}
+h1{
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    text-shadow: 2px 2px 4px #000000;
+}
+p{
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #000000;
+}
+#playerName{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgb(169, 233, 255);
+    
+}
+.start{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    padding: 10px;
+   
+    font-size: 30px;
+    background-color: rgb(59, 206, 255);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+   
+   border: 2px solid black;
+}
+
+
+.start:hover{
+    background-color: rgb(5, 115, 115);
+    color: white;
+
+}
+
+.start:active{
+          transform: scale(0.95);
+      background-color: #ccc;
+
+}
+#footer{
+    position: relative;
+    top: 130px;
+    width: 100%;
+    bottom: 0;
+    
+    font-size: 20px;
+    
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: right;
+}
+#batbowl{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    background-color:rgb(59, 206, 255);
+    border-radius: 20px;
+    position: relative;
+    right: 110px;
+    top: 55px;
+    border: 2px solid black;
+}
+#batbowl:hover{
+    background-color: rgb(5, 115, 115);
+    color: white;
+}
+#emoji{
+    position: relative;
+    bottom: 85px;
+}
+#body2{
+    background-image: url('pitch.jepg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+#left-image{
+position: absolute;
+    top: 180px;
+    right: -510px;   /* example */
+    width: 280px;
+    height: 280px;
+    border: 10px solid rgb(128, 255, 128);
+    border-radius: 5px;
+}
+#right-image{
+    position: absolute;
+    top: 180px;
+    right: 210px;  /* example */
+    width: 280px;
+    height: 280px;
+    border: 10px solid rgb(128, 255, 128);
+    border-radius: 5px;
+    
+}
+.container{
+  position: fixed;
+}
+#player{
+    position: absolute;
+     top:80px;
+   right:340px;
+     font-family: 'Press Start 2P', cursive;
+font-weight: bold;
+
+}
+#comp{
+    position: absolute;
+    top:80px;
+   left:320px;
+    
+     font-family: 'Press Start 2P', cursive;
+     font-weight: bold;
+
+}
+.change{
+    background-color: rgb(255, 155, 155);
+    height: 30px;
+      display: inline-block;
+  padding: 8px 16px;
+  text-align: center;
+  user-select: none;
+}
+.change:hover{
+    background-color: rgb(255, 0, 0);
+}
+.change:active{
+    transform: scale(0.95);
+    background-color: #ccc;
+}
+.options{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap:20px;
+position: absolute;
+top:575px;
+   
+
+}
+.option{
+    font-size: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;  
+    padding-bottom: 10px;
+    font-family: 'Press Start 2P';
+    background-color: rgb(214, 255, 153);
+    border-radius: 25px;
+    border: 5px solid black;
+    border-style: groove;
+    
+}
+.option:hover{
+    background-color: #50ab50;
+    color: white;
+}
+.option:active{
+          transform: scale(0.95);
+      background-color: #ccc;
+}
+
+#score-comp{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 175px;
+    height: 125px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+    text-align: center;
+     font-family:fantasy;
+     background-color: rgb(0, 0, 0);
+    color: #ff073a;
+ border: 4px solid rgb(255, 126, 126);    border-style: dotted;
+ 
+
+}
+#score-player{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 175px;
+    height: 125px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+    text-align: center;
+    font-family:fantasy;
+    background-color: rgb(0, 0, 0);
+    color: #ff073a;
+    border: 4px solid rgb(255, 126, 126);
+    border-style: dotted;
+
+
+}
+#winning{
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 60, 0);
+    text-align: center;
+    
+    padding: 20px;
+    border-radius: 10px;
+}
+#result{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(50, 50, 215);
+    
+}
+.oddeven {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: opx;
+}
+    
+.oddeven button {
+    
+    gap: 0px;
+    font-size: 40px;
+    padding: 18px 38px;
+    margin: 0 15px;
+    border-radius: 18px;
+    border: 3px solid #fff;
+    background-color: #ffb347;
+    color: #222;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px #2228;
+    
+}
+
+.oddeven button:hover {
+    background-color: #7cc6ed;
+    color: #fff;
+   
+    transform: scale(1.05);
+}
+
+.oddeven button:active {
+    background-color: #ffd580;
+    color: #222;
+    
+}
+
+.entergame {
+    font-size: 36px;
+    padding: 16px 48px;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    background: linear-gradient(90deg, #3bceff 0%, #3232d7 100%);
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 24px #3232d799, 0 2px 8px #0008;
+    transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+    margin: 30px auto;
+    display: block;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px #2228;
+}
+.entergame:hover {
+    background: linear-gradient(90deg, #3232d7 0%, #3bceff 100%);
+    color: #ffeb3b;
+    box-shadow: 0 6px 32px #3bceffcc, 0 2px 8px #000a;
+    transform: scale(1.05);
+}
+.entergame:active {
+    background: #2323a0;
+    color: #fff;
+    box-shadow: 0 2px 8px #2228;
+    transform: scale(0.97);
+}
+.choose-h1{
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000000;
+}
+        .choose-images-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 150px;
+            margin-top: 40px;
+            height: 90vh;
+        }
+        .choose-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 18px;
+            border: 4px solid #3bceff;
+            box-shadow: 0 4px 24px #3232d799, 0 2px 8px #0008;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+            background: #2323a0;
+            object-fit: cover;
+        }
+        .choose-img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 32px #3bceffcc, 0 2px 8px #000a;
+            border-color: #ffeb3b;
+        }

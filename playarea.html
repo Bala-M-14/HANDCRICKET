@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAY AREA</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body id="body2">
+    <div id="nametag">
+   <p id="comp">Computer:</p><br >
+   <p id="player">Player:</p>
+   </div>
+
+   <div class="container" >
+        <img src="num0.jpg" alt="0" class="left-image" id="left-image">
+    <img src="num0.jpg" alt="0" class="right-image" id="right-image">
+        </div>
+         <label for="score"></label>
+  <input type="text" id="score-player"  readonly>
+    <input type="text" id="score-comp" readonly>
+       <div  id="options1" class="options">
+  <button class="option" data-image="num0.jpg" value=0>0</button>
+  <button class="option" data-image="num1.jpg" value=1>1</button>
+  <button class="option" data-image="num2.jpg"value=2>2</button>
+  <button class="option" data-image="num3.jpg" value=3>3</button>
+  <button class="option" data-image="num4.jpg" value=4>4</button>
+  <button class="option"  data-image="num5.jpg"value=5>5</button>
+  <button class="option" data-image="num6.jpg"  value=6>6</button>
+</div>
+<P id="result"></P>
+
+        <p id="winning"></p>
+         <script src= "https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+    <script src="scr.js"></script>
+</body>
+</html>
