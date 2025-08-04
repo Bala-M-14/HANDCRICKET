@@ -39,9 +39,14 @@ playerButtons.forEach(button => {
             Swal.fire({
               title: "It's a Tie!",
               text: `Both scored ${playerScore}.`,
-              imageUrl: "tie.jpg", // Use a tie image if you have one
+              imageUrl: "win.jpg", // Use a tie image if you have one
               imageWidth: 200,
               imageHeight: 200,
+              confirmButtonText: 'play again',
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = "choose.html";  // same folder 
+              }
             });
             resultDisplay.textContent = "It's a Tie!";
           } else {
@@ -52,6 +57,11 @@ playerButtons.forEach(button => {
               imageUrl: "out.jpg",
               imageWidth: 200,
               imageHeight: 200,
+              confirmButtonText: 'play again',
+            }).then((result) => {
+              if (result.isConfirmed) {
+    window.location.href = "choose.html";  // same folder
+  }
             });
             resultDisplay.textContent = "Computer Wins!";
           }
@@ -83,6 +93,11 @@ playerButtons.forEach(button => {
             imageUrl: "win.jpg",
             imageWidth: 200,
             imageHeight: 200,
+            confirmButtonText: 'play again',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = "choose.html";  // same folder
+            }
           });
           resultDisplay.textContent = "You Win!";
         }
@@ -130,6 +145,11 @@ playerButtons.forEach(button => {
                 imageUrl: "tie.jpg", // Use a tie image if you have one
                 imageWidth: 200,
                 imageHeight: 200,
+                confirmButtonText: 'play again',
+              }).then((result) => {
+                if (result.isConfirmed) { 
+                  window.location.href = "choose.html";  // same folder 
+                }
               });
               resultDisplay.textContent = "It's a Tie!";
             } else {
@@ -139,6 +159,11 @@ playerButtons.forEach(button => {
                 imageUrl: "win.jpg",
                 imageWidth: 200,
                 imageHeight: 200,
+                confirmButtonText: 'play again',
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "choose.html";  // same folder
+                }
               });
               resultDisplay.textContent = "You Win!";
             }
@@ -149,6 +174,11 @@ playerButtons.forEach(button => {
               imageUrl: "out.jpg",
               imageWidth: 200,
               imageHeight: 200,
+              confirmButtonText: 'play again',
+            }).then((result) => { 
+              if (result.isConfirmed) {
+                window.location.href = "choose.html";  // same folder
+              }
             });
             resultDisplay.textContent = "Computer Wins!";
           }
@@ -162,7 +192,12 @@ playerButtons.forEach(button => {
               imageUrl: "out.jpg",
               imageWidth: 200,
               imageHeight: 200,
-            });
+              confirmButtonText: 'play again',
+            })  .then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "choose.html";  // same folder
+          }
+          });
             resultDisplay.textContent = "Computer Wins!";
           }
         }
