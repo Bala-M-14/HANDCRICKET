@@ -7,10 +7,10 @@ const params = new URLSearchParams(window.location.search);
 const choice = params.get('choice');
 
 if (choice === 'bat') {
-    isPlayerTurn = true; // Player bats first
+    isPlayerTurn = true;
 }
 if (choice === 'bowl') {
-    isPlayerTurn = false; // Player bowls first
+    isPlayerTurn = false;
 }
 
 const playerButtons = document.querySelectorAll('.options button');
@@ -25,32 +25,28 @@ playerButtons.forEach(button => {
     const chosen = parseInt(button.value);
 
     if (isPlayerTurn) {
-      // --- Player batting phase ---
       const compBall = Math.floor(Math.random() * 7);
 
       playerImage.src = button.getAttribute('data-image');
       computerImage.src = `num${compBall}.jpg`;
 
       if (chosen === compBall) {
-        // Player OUT
         if (targetScore > 0 && playerScore < targetScore) {
           if (playerScore === targetScore - 1) {
-            // Tie condition
             Swal.fire({
               title: "It's a Tie!",
               text: `Both scored ${playerScore}.`,
-              imageUrl: "win.jpg", // Use a tie image if you have one
+              imageUrl: "win.jpg",
               imageWidth: 200,
               imageHeight: 200,
               confirmButtonText: 'play again',
             }).then((result) => {
               if (result.isConfirmed) {
-                window.location.href = "choose.html";  // same folder 
+                window.location.href = "choose.html";
               }
             });
             resultDisplay.textContent = "It's a Tie!";
           } else {
-            // Player failed to chase the target
             Swal.fire({
               title: "Computer Wins!",
               text: `You are OUT! You scored ${playerScore}.`,
@@ -60,13 +56,12 @@ playerButtons.forEach(button => {
               confirmButtonText: 'play again',
             }).then((result) => {
               if (result.isConfirmed) {
-    window.location.href = "choose.html";  // same folder
-  }
+                window.location.href = "choose.html";
+              }
             });
             resultDisplay.textContent = "Computer Wins!";
           }
         } else {
-          // End of first innings, switch to computer chase
           Swal.fire({
             text: `You are OUT! Computer also played ${compBall}`,
             title: "DEFEND THE TARGET",
@@ -85,7 +80,6 @@ playerButtons.forEach(button => {
         playerScore += chosen;
         playerScoreInput.value = playerScore;
 
-        // Win check for chasing phase
         if (targetScore > 0 && playerScore >= targetScore) {
           Swal.fire({
             title: "You Win!",
@@ -96,7 +90,7 @@ playerButtons.forEach(button => {
             confirmButtonText: 'play again',
           }).then((result) => {
             if (result.isConfirmed) {
-              window.location.href = "choose.html";  // same folder
+              window.location.href = "choose.html";
             }
           });
           resultDisplay.textContent = "You Win!";
@@ -104,7 +98,6 @@ playerButtons.forEach(button => {
       }
 
     } else {
-      // --- Computer batting phase ---
       const compBat = Math.floor(Math.random() * 7);
       const compBowl = chosen;
 
@@ -112,7 +105,6 @@ playerButtons.forEach(button => {
       computerImage.src = `num${compBat}.jpg`;
 
       if (targetScore === 0) {
-        // First innings: computer batting, accumulate score until out
         if (compBat === compBowl) {
           Swal.fire({
             title: "Computer is OUT!",
@@ -133,22 +125,19 @@ playerButtons.forEach(button => {
           computerScoreInput.value = computerScore;
         }
       } else {
-        // Second innings: computer chasing
         if (compBat === compBowl) {
-          // Computer OUT
           if (computerScore < targetScore) {
             if (computerScore === targetScore - 1) {
-              // Tie condition
               Swal.fire({
                 title: "It's a Tie!",
                 text: `Both scored ${computerScore}.`,
-                imageUrl: "tie.jpg", // Use a tie image if you have one
+                imageUrl: "tie.jpg",
                 imageWidth: 200,
                 imageHeight: 200,
                 confirmButtonText: 'play again',
               }).then((result) => {
-                if (result.isConfirmed) { 
-                  window.location.href = "choose.html";  // same folder 
+                if (result.isConfirmed) {
+                  window.location.href = "choose.html";
                 }
               });
               resultDisplay.textContent = "It's a Tie!";
@@ -162,7 +151,7 @@ playerButtons.forEach(button => {
                 confirmButtonText: 'play again',
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "choose.html";  // same folder
+                  window.location.href = "choose.html";
                 }
               });
               resultDisplay.textContent = "You Win!";
@@ -175,9 +164,9 @@ playerButtons.forEach(button => {
               imageWidth: 200,
               imageHeight: 200,
               confirmButtonText: 'play again',
-            }).then((result) => { 
+            }).then((result) => {
               if (result.isConfirmed) {
-                window.location.href = "choose.html";  // same folder
+                window.location.href = "choose.html";
               }
             });
             resultDisplay.textContent = "Computer Wins!";
@@ -194,10 +183,10 @@ playerButtons.forEach(button => {
               imageHeight: 200,
               confirmButtonText: 'play again',
             })  .then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = "choose.html";  // same folder
-          }
-          });
+              if (result.isConfirmed) {
+                window.location.href = "choose.html";
+              }
+            });
             resultDisplay.textContent = "Computer Wins!";
           }
         }
